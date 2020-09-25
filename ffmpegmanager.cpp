@@ -141,7 +141,7 @@ void FfmpegManager::play()
     mPlayProcess->start("ffplay", arguments, QIODevice::ReadWrite);
     QThread::msleep(5);
 
-    connect(_rx_socket, &QLocalSocket::errorOccurred, this, &FfmpegManager::_read_error);
+//    connect(_rx_socket, &QLocalSocket::errorOccurred, this, &FfmpegManager::_read_error);
     connect(_rx_socket, &QLocalSocket::readyRead, this, &FfmpegManager::_read_incomming_data);
 }
 

@@ -7,7 +7,8 @@ void Backend::_onFFmpegConnected(){
         qDebug() << "[Backend] no pending connections";
         return;
     }
-    emit launchParsing("/media/alex/01D39ACE5091F6C0", pipe);
+    emit launchParsing("F:/", pipe);
+//    emit launchParsing("/media/alex/01D39ACE5091F6C0", pipe);
     emit runFFmpegPlayer();
 }
 
